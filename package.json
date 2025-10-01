@@ -1,0 +1,57 @@
+{
+  "name": "dela-iframe-test",
+  "version": "1.0.0",
+  "description": "A github page to test an embedded application form in an iframe.",
+  "author": "David Kurek",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daviddomain/dela-iframe-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daviddomain/dela-iframe-test/issues"
+  },
+  "homepage": "https://daviddomain.github.io/dela-iframe-test/",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build:lib": "vite build -m lib",
+    "build:site": "vite build -m site",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "keywords": [
+    "webcomponent",
+    "custom-element",
+    "vanilla-js",
+    "vite",
+    "library"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/dela-iframe-test.js",
+  "module": "./dist/dela-iframe-test.js",
+  "exports": {
+    ".": {
+      "import": "./dist/dela-iframe-test.js"
+    },
+    "./*": "./dist/*"
+  },
+  "sideEffects": true,
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "vite": "^6.3.5"
+  }
+}
